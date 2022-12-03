@@ -8,7 +8,11 @@ public class MissionDao {
 
     RestTemplate restTemplate;
 
+    public MissionDao(RestTemplate restTemplate) {
+        this.restTemplate = restTemplate;
+    }
+
     public Mission fetchMission(){
-        return  restTemplate.getForObject("https://api.spacexdata.com/v3/missions/F4F83DE" , Mission.class);
+        return  restTemplate.getForObject("/missions/F4F83DE" , Mission.class);
     }
 }
