@@ -8,7 +8,6 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class SpacexController {
 
-
     @GetMapping(path = "/mission/{mission_id}")
     ResponseEntity<String> findOneMission(@PathVariable(name = "mission_id") String id){
        return ResponseEntity.ok("Hello spacex " + id);
